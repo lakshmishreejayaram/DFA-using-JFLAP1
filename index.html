@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DFA Simulator | Ends with aab</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="brand">◈ Automata Lab</div>
+    <span class="tag">THEORY OF COMPUTATION</span>
+  </header>
+
+  <main>
+    <section class="intro">
+      <p class="eyebrow">FINITE AUTOMATA PROJECT</p>
+      <h1>DFA Simulator</h1>
+      <p>Explore a Deterministic Finite Automaton that accepts strings
+        over {a, b} ending with <strong>aab</strong>.</p>
+    </section>
+
+    <section class="panel">
+      <h2>Language Definition</h2>
+      <div class="definition">
+        <span>Alphabet</span>
+        <strong>Σ = {a, b}</strong>
+        <span>Acceptance condition</span>
+        <strong>String ends with "aab"</strong>
+      </div>
+
+      <h2>State Diagram</h2>
+      <p class="hint">Purple indicates the current state. The double circle is the accepting state.</p>
+      <div class="diagram-wrap">
+        <svg id="diagram" viewBox="0 0 620 290"
+             role="img" aria-label="DFA diagram ending with aab"></svg>
+      </div>
+      <div class="legend">
+        <span><i class="dot start"></i> Start</span>
+        <span><i class="dot normal"></i> State</span>
+        <span><i class="dot accept"></i> Accepting state</span>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Test Your Input</h2>
+      <p class="hint">Enter a string containing only a and b.</p>
+
+      <form id="test-form">
+        <label for="user-input">Input string</label>
+        <div class="input-row">
+          <input id="user-input" type="text"
+                 placeholder="Example: aaab" autocomplete="off"
+                 spellcheck="false">
+          <button type="submit">Simulate DFA →</button>
+        </div>
+      </form>
+
+      <div class="examples">
+        <span>Try:</span>
+        <button type="button" class="sample" data-value="aab">aab</button>
+        <button type="button" class="sample" data-value="aaab">aaab</button>
+        <button type="button" class="sample" data-value="abaab">abaab</button>
+        <button type="button" class="sample" data-value="aaba">aaba</button>
+        <button type="button" class="sample" data-value="abab">abab</button>
+      </div>
+
+      <div id="result" class="result" aria-live="polite">
+        Enter a string to begin.
+      </div>
+
+      <div id="trace-section" hidden>
+        <h3>Transition Trace</h3>
+        <div id="trace" class="trace"></div>
+        <p id="final-state" class="final-state"></p>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Transition Table</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>State</th>
+              <th>Input a</th>
+              <th>Input b</th>
+              <th>Accepting?</th>
+            </tr>
+          </thead>
+          <tbody id="transition-table"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <footer>Automata Lab · Built with HTML, CSS and JavaScript</footer>
+  </main>
+</body>
+</html>
