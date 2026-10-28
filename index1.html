@@ -1,0 +1,84 @@
+
+<section class="panel">
+  <h2>DFA Diagram: Ends with aab</h2>
+  <p class="hint">Start at q0. The accepting state is q3.</p>
+
+  <div class="diagram-wrap">
+    <svg id="aab-diagram" viewBox="0 0 600 230"
+         role="img" aria-label="DFA accepting strings ending with aab">
+      <defs>
+        <marker id="aab-arrow" markerWidth="8" markerHeight="8"
+                refX="7" refY="4" orient="auto">
+          <path d="M0,0 L8,4 L0,8 Z" fill="#8995aa"/>
+        </marker>
+      </defs>
+
+      <!-- Start arrow -->
+      <path d="M 10 120 L 48 120" stroke="#8995aa"
+            stroke-width="2" marker-end="url(#aab-arrow)" fill="none"/>
+
+      <!-- q0 loop on b -->
+      <path d="M 62 101 C 30 55, 112 55, 80 101"
+            stroke="#8995aa" stroke-width="2"
+            marker-end="url(#aab-arrow)" fill="none"/>
+      <text x="70" y="53" text-anchor="middle" fill="#536178">b</text>
+
+      <!-- q0 to q1 on a -->
+      <path d="M 94 120 L 168 120" stroke="#8995aa"
+            stroke-width="2" marker-end="url(#aab-arrow)" fill="none"/>
+      <text x="131" y="109" text-anchor="middle" fill="#536178">a</text>
+
+      <!-- q1 to q2 on a -->
+      <path d="M 212 120 L 288 120" stroke="#8995aa"
+            stroke-width="2" marker-end="url(#aab-arrow)" fill="none"/>
+      <text x="250" y="109" text-anchor="middle" fill="#536178">a</text>
+
+      <!-- q2 to q3 on b -->
+      <path d="M 332 120 L 408 120" stroke="#8995aa"
+            stroke-width="2" marker-end="url(#aab-arrow)" fill="none"/>
+      <text x="370" y="109" text-anchor="middle" fill="#536178">b</text>
+
+      <!-- q1 to q0 on b -->
+      <path d="M 180 98 C 180 20, 70 20, 70 98"
+            stroke="#8995aa" stroke-width="2"
+            marker-end="url(#aab-arrow)" fill="none"/>
+      <text x="126" y="24" text-anchor="middle" fill="#536178">b</text>
+
+      <!-- q2 loop on a -->
+      <path d="M 302 99 C 270 55, 352 55, 320 99"
+            stroke="#8995aa" stroke-width="2"
+            marker-end="url(#aab-arrow)" fill="none"/>
+      <text x="310" y="53" text-anchor="middle" fill="#536178">a</text>
+
+      <!-- q3 transitions on a and b -->
+      <path d="M 430 98 C 430 38, 210 38, 210 98"
+            stroke="#8995aa" stroke-width="2"
+            marker-end="url(#aab-arrow)" fill="none"/>
+      <text x="320" y="41" text-anchor="middle" fill="#536178">a</text>
+
+      <path d="M 420 143 C 360 205, 130 205, 70 143"
+            stroke="#8995aa" stroke-width="2"
+            marker-end="url(#aab-arrow)" fill="none"/>
+      <text x="245" y="205" text-anchor="middle" fill="#536178">b</text>
+
+      <!-- States -->
+      <circle cx="70" cy="120" r="22" fill="#fff"
+              stroke="#8995aa" stroke-width="2"/>
+      <text x="70" y="125" text-anchor="middle" fill="#26354b">q0</text>
+
+      <circle cx="190" cy="120" r="22" fill="#fff"
+              stroke="#8995aa" stroke-width="2"/>
+      <text x="190" y="125" text-anchor="middle" fill="#26354b">q1</text>
+
+      <circle cx="310" cy="120" r="22" fill="#fff"
+              stroke="#8995aa" stroke-width="2"/>
+      <text x="310" y="125" text-anchor="middle" fill="#26354b">q2</text>
+
+      <circle cx="430" cy="120" r="22" fill="#e5f7ee"
+              stroke="#15845d" stroke-width="2"/>
+      <circle cx="430" cy="120" r="17" fill="none"
+              stroke="#15845d" stroke-width="1.5"/>
+      <text x="430" y="125" text-anchor="middle" fill="#15845d">q3</text>
+    </svg>
+  </div>
+</section>
